@@ -25,6 +25,8 @@ apt-get update
 # Install Features
 apt-get install ntfs-3g owncloud
 
+echo $?
+
 # If Apt-Get fails to run completely the rest of this isn't going to work...
 if [ $? -ne 0 ]
 then
