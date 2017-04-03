@@ -23,7 +23,7 @@ sh -c "echo 'deb http://download.owncloud.org/download/repositories/stable/Debia
 apt-get update
 
 # Install Features
-sudo apt-get install ntfs-3g owncloud
+apt-get install ntfs-3g owncloud
 
 # If Apt-Get fails to run completely the rest of this isn't going to work...
 if [ $? -ne 0 ]
