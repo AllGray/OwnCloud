@@ -42,7 +42,6 @@ sed -ie 's/^max_execution_time =.*$/max_execution_time = 300/g' /etc/php5/apache
 mkdir /media/ownclouddrive
 
 # Create and add the www-data user to the www-data group
-groupadd www-data
 usermod -a -G www-data www-data
 
 # Make the user www-data owner of the mounted drive and make its permissions read, write and execute
