@@ -55,11 +55,11 @@ systemctl restart apache2
 # Create OwnCloud DB and grant owncloud User permissions to it
 
 # SQL Code
-##SQLCODE="
-##create database owncloud;
-##create user 'owncloud'@'localhost' identified by \"$ownclouddbuserpassword\";
-##GRANT SELECT,INSERT,UPDATE,DELETE ON owncloud.* TO 'owncloud'@'localhost';
-##flush privileges;"
+SQLCODE="
+create database owncloud;
+create user 'owncloud'@'localhost' identified by \"$ownclouddbuserpassword\";
+GRANT SELECT,INSERT,UPDATE,DELETE ON owncloud.* TO 'owncloud'@'localhost';
+flush privileges;"
 
 # Execute SQL Code
 echo $SQLCODE | mysql -u root -p$mysqlrootpassword
