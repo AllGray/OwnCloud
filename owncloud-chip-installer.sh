@@ -26,7 +26,7 @@ apt-get update
 sudo apt-get install ntfs-3g owncloud
 
 # If Apt-Get fails to run completely the rest of this isn't going to work...
-if [ $? != 0 ]
+if [ $? -ne 0 ]
 then
     echo "Make sure to run: sudo apt-get update && sudo apt-get upgrade"
     exit
