@@ -14,11 +14,8 @@ apt-key add - < Release.key
 sh -c "echo 'deb http://download.owncloud.org/download/repositories/stable/Debian_8.0/ /' > /etc/apt/sources.list.d/owncloud.list"
 apt-get update
 
-# Install Apache2
-apt-get install apache2
-
 # Install Features
-apt-get install ntfs-3g owncloud
+apt-get install ntfs-3g owncloud mysql-server-
 
 # If Apt-Get fails to run completely the rest of this isn't going to work...
 if [ $? -ne 0 ]
