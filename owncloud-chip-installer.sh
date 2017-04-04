@@ -15,7 +15,7 @@ sh -c "echo 'deb http://download.owncloud.org/download/repositories/stable/Debia
 apt-get update
 
 # Install Features
-apt-get install ntfs-3g owncloud mysql-server-
+apt-get -y install ntfs-3g owncloud mysql-server-
 
 # If Apt-Get fails to run completely the rest of this isn't going to work...
 if [ $? -ne 0 ]
@@ -42,3 +42,7 @@ chmod -R 775 /media/ownclouddrive
 
 # Restart Apache
 systemctl restart apache2
+
+# cleanup
+rm -r Release.key
+rm -r owncloud-chip-installer.sh
