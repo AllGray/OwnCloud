@@ -6,14 +6,6 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-# Grab a password for MySQL Root
-read -s -p "Enter the password that will be used for MySQL Root: " mysqlrootpassword
-debconf-set-selections <<< "mysql-server mysql-server/root_password password $mysqlrootpassword"
-debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $mysqlrootpassword"
-
-# Grab a password for owncloud Database User Account
-read -s -p "Enter the password that will be used for the owncloud database: " ownclouddbuserpassword
-
 # Setup OwnCloud Files
 wget -nv https://download.owncloud.org/download/repositories/stable/Debian_8.0/Release.key -O Release.key
 apt-key add - < Release.key
@@ -50,16 +42,3 @@ chmod -R 775 /media/ownclouddrive
 
 # Restart Apache
 systemctl restart apache2
-
-# Create OwnCloud DB and grant owncloud User permissions to it
-
-# SQL Code
-SQLCODE="
-create database owncloud;
-create user 'owncloud'@'localhost' identified by \"$ownclouddbuserpassword\";
-GRANT SELECT,INSERT,UPDATE,DELETE ON owncloud.* TO 'owncloud'@'localhost';
-flush privileges;"
-
-# Execute SQL Code
-echo $SQLCODE | mysql -u root -p$mysqlrootpassword
-
