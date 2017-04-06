@@ -1,6 +1,9 @@
 #!/bin/sh
 
 
+# Clear the screen
+clear
+
 # Start info
 echo "+---------------------------------------------------------+"
 echo "|                       IMPORTANT                         |"
