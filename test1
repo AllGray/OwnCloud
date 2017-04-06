@@ -48,6 +48,7 @@ echo "</service>" >> /etc/avahi/services/afpd.service
 echo "</service-group>" >> /etc/avahi/services/afpd.service
 
 # Setup host name
+read -r hostname_old < /etc/hostname
 sed -i "s/$hostname_old/$hostname_new/g" /etc/hostname
 sed -i "s/$hostname_old/$hostname_new/g" /etc/hosts
 
