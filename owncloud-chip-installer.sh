@@ -72,6 +72,9 @@ systemctl restart apache2
 rm -r Release.key
 rm -r owncloud-chip-installer.sh
 
+# Clear screen
+reset
+
 # Finishing up
 echo "+---------------------------------------------------------------------+"
 echo "|                         Congratulation!                             |"
