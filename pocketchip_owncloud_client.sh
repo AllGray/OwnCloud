@@ -2,7 +2,7 @@
 
 
 # Clear the screen
-clear
+reset
 
 # Start info
 echo "+---------------------------------------------------------+"
