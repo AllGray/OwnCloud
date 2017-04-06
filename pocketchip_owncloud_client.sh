@@ -12,7 +12,7 @@ echo "+---------------------------------------------------------------------+"
 # Grab Hostname
 read -s -p "What is your servers HOSTNAME/local ip address : " hostname
 
-wget -O /home/chip/Pictures/owncloud.png https://daniel.molkentin.net/wp-content/uploads/sites/2/2013/04/owncloud-icon-2561.png
+wget -O /home/chip/Pictures/owncloud.png https://raw.githubusercontent.com/AllGray/OwnCloud/master/owncloud.png
 
 # Create PocketHOME icon
 cat >/home/chip/pocketcloud <<EOL
