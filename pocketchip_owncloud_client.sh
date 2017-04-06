@@ -7,7 +7,7 @@ reset
 # Start info
 echo "+-----------------------------------------------------------+"
 echo "|                         IMPORTANT                         |"
-echo "|  If you have Netatalk installed use the servers HOSTNAME  |"
+echo "| If you have Netatalk installed, use the servers HOSTNAME  |"
 echo "|            If you dont have Netatalk installed            |"
 echo "|            use your owncloud servers IP Addess            |"
 echo "+-----------------------------------------------------------+"
@@ -37,7 +37,7 @@ reset
 
 # Finishing up
 echo "+------------------------------------------------------+"
-echo "|                   Congratulation !                   |"
+echo "|                   Congratulation!!                   |"
 echo "|                 Your install is done                 |"
 echo "| Please restart you pocketCHIP for the icon to appear |"
 echo "|                                                      |"
@@ -46,5 +46,5 @@ echo "|                                                      |"
 echo "|                                                      |"
 echo "|                                                      |"
 echo "|                                                      |"
-echo "|    This installer was brought to you by AllGray! !   |"
+echo "|    This installer was brought to you by AllGray!!    |"
 echo "+------------------------------------------------------+"
