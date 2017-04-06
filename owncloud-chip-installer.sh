@@ -6,8 +6,9 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-# Choose a host name
-read -s -p "Choose your new host name: " hostname
+# Choose a new host name
+read -s -p "Type your old hostname (if you don't know, then type: chip): " hostname_old
+read -s -p "Choose your new host name: " hostname_new
 
 # Setup OwnCloud Files
 wget -nv https://download.owncloud.org/download/repositories/stable/Debian_8.0/Release.key -O Release.key
@@ -48,8 +49,8 @@ echo "</service>" >> /etc/avahi/services/afpd.service
 echo "</service-group>" >> /etc/avahi/services/afpd.service
 
 # Setup host name
-sed -i "s/chip/$hostname/g" /etc/hostname
-sed -i "s/chip/$hostname/g" /etc/hosts
+sed -i "s/$hostname_old/$hostname_new/g" /etc/hostname
+sed -i "s/$hostname_old/$hostname_new/g" /etc/hosts
 
 # Restart AVAHI
 sudo /etc/init.d/avahi-daemon restart
@@ -70,3 +71,17 @@ systemctl restart apache2
 # cleanup
 rm -r Release.key
 rm -r owncloud-chip-installer.sh
+
+# Finishing up
+echo "+---------------------------------------------------------------------+"
+echo "|                         Congratulation!                             |"
+echo "|                      Your install is done.                          |"
+echo "|           Head over to http://your.local.ip/owncloud                |"
+echo "|                       To finish your setup                          |"
+echo "| Username:     pick whatever you want                                |"
+echo "| Password:     pick whatever you want                                |"
+echo "| Mount folder: /media/owncloud/                                      |"
+echo "|                                                                     |"
+echo "|            This installer was brought to you buy AllGray            |"
+echo "+---------------------------------------------------------------------+"
+
