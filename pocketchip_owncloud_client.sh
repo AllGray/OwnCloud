@@ -13,7 +13,7 @@ echo "|            use your owncloud servers IP Addess            |"
 echo "+-----------------------------------------------------------+"
 
 # Grab Hostname
-read -s -p "What is your servers HOSTNAME/local ip address : " hostname
+read -p "What is your servers HOSTNAME/local ip address : " hostname
 
 wget -O /home/chip/Pictures/owncloud.png https://raw.githubusercontent.com/AllGray/OwnCloud/master/owncloud.png
 
