@@ -7,8 +7,8 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # Choose a new host name
-read -p "Type your old hostname (if you don't know, then type: chip): " hostname_old
-read -p "Choose your new host name: " hostname_new
+read "Type your old hostname (if you don't know, then type: chip): " hostname_old
+read "Choose your new host name: " hostname_new
 
 # Setup OwnCloud Files
 wget -nv https://download.owncloud.org/download/repositories/stable/Debian_8.0/Release.key -O Release.key
