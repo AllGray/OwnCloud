@@ -86,6 +86,6 @@ echo "| Username:     pick whatever you want                                |"
 echo "| Password:     pick whatever you want                                |"
 echo "| Mount folder: /media/owncloud/                                      |"
 echo "|                                                                     |"
-echo "|            This installer was brought to you buy AllGray            |"
+echo "|            This installer was brought to you by AllGray!            |"
 echo "+---------------------------------------------------------------------+"
 
