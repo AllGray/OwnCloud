@@ -32,6 +32,9 @@ sed -i 6rpocketcloud ~/.pocket-home/config.json
 # Clean up
 rm -r pocketcloud pocketchip_owncloud_client.sh
 
+# Clear screen
+reset
+
 # Finishing up
 echo "+------------------------------------------------------+"
 echo "|                    Congratulation!                   |"
