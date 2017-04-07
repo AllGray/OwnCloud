@@ -77,6 +77,7 @@ usermod -a -G www-data www-data
 chown -R www-data:www-data /media/ownclouddrive
 chmod -R 775 /media/ownclouddrive
 
+
 # Restart Apache
 systemctl restart apache2
 
