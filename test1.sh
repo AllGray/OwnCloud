@@ -85,6 +85,10 @@ chown -R www-data:www-data /media/ownclouddrive
 rm -r Release.key
 rm -r owncloud-chip-installer.sh
 
+# Grab Local IP address
+hostname -I > local_ip.txt
+read -r local_ip < local_ip.txt
+
 # Restart Apache
 systemctl restart apache2
 
@@ -97,7 +101,7 @@ echo "|                           Congratulation!                           |"
 echo "|                        Your install is done!                        |"
 echo "|                      Your HOSTNAME is $hostname_new                      |"
 echo "|            If you don't have Bonjour/Netatalk installed,            |"
-echo "|             Head over  to http://your.local.ip/owncloud             |"
+echo "|             Head over  to http://$local_ip/owncloud             |"
 echo "|                                                                     |"
 echo "|              if you DO have Bonjour/Netatalk installed              |"
 echo "|             Head over to http://$hostname_new.local/owncloud             |"
