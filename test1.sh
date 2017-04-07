@@ -17,7 +17,7 @@ echo "+-----------------------------------------------------------+"
 echo "|                   CHOOSE A NEW HOSTNAME                   |"
 echo "|                   Your Hostname is $hostname_old                   |"
 echo "| If you want to keep $hostname_old as  your hostname just type $hostname_old |"
-echo "|  Be avare that using $hostname_old as hostname can cause problems  |"
+echo "|  Be avare that using chip as hostname can cause problems  |"
 echo "|   if you have more than 1 CHIP connected to you network   |"
 echo "+-----------------------------------------------------------+"
 
