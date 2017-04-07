@@ -29,7 +29,7 @@ sh -c "echo 'deb http://download.owncloud.org/download/repositories/stable/Debia
 apt-get update
 
 # Install Locals
-apt-get -y install locales && sudo dpkg-reconfigure locales && sudo locale-gen
+apt-get -y install locales && dpkg-reconfigure locales && locale-gen
 
 # Install Features
 apt-get -y install ntfs-3g owncloud mysql-server-
