@@ -9,12 +9,16 @@ fi
 # Clear the screen
 reset
 
+# Grab the current hostname
+read -r hostname_old < /etc/hostname
+
 # Start info
 echo "+-----------------------------------------------------------+"
 echo "|                   CHOOSE A NEW HOSTNAME                   |"
-echo "| If you want to keep chip as  your hostname just type chip |"
-echo "|  Be avare that using chip as hostname can cause problems  |"
-echo "|   if you have more than 1 chip connected to you network   |"
+echo "|                   Your Hostname is $hostname_old                   |"
+echo "| If you want to keep $hostname_old as  your hostname just type $hostname_old |"
+echo "|  Be avare that using $hostname_old as hostname can cause problems  |"
+echo "|   if you have more than 1 CHIP connected to you network   |"
 echo "+-----------------------------------------------------------+"
 
 # Choose a new host name
@@ -74,16 +78,15 @@ mkdir /media/ownclouddrive
 usermod -a -G www-data www-data
 
 # Make the user www-data owner of the mounted drive and make its permissions read, write and execute
-chown -R www-data:www-data /media/ownclouddrive
 chmod -R 775 /media/ownclouddrive
-
-
-# Restart Apache
-systemctl restart apache2
+chown -R www-data:www-data /media/ownclouddrive
 
 # cleanup
 rm -r Release.key
 rm -r owncloud-chip-installer.sh
+
+# Restart Apache
+systemctl restart apache2
 
 # Clear screen
 reset
@@ -92,12 +95,12 @@ reset
 echo "+---------------------------------------------------------------------+"
 echo "|                           Congratulation!                           |"
 echo "|                        Your install is done!                        |"
-echo "|                   Your HOSTNAME is $hostname_new                    |"
+echo "|                      Your HOSTNAME is $hostname_new                      |"
 echo "|            If you don't have Bonjour/Netatalk installed,            |"
 echo "|             Head over  to http://your.local.ip/owncloud             |"
 echo "|                                                                     |"
 echo "|              if you DO have Bonjour/Netatalk installed              |"
-echo "|          Head over to http://$hostname_new.local/owncloud           |"
+echo "|             Head over to http://$hostname_new.local/owncloud             |"
 echo "|                        To finish your setup!                        |"
 echo "|                                                                     |"
 echo "| Username:       Pick your Poison                                    |"
