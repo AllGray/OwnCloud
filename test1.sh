@@ -81,13 +81,12 @@ usermod -a -G www-data www-data
 chmod -R 775 /media/ownclouddrive
 chown -R www-data:www-data /media/ownclouddrive
 
-# cleanup
-rm -r Release.key
-rm -r owncloud-chip-installer.sh
-
 # Grab Local IP address
 hostname -I > local_ip.txt
 read -r local_ip < local_ip.txt
+
+# cleanup
+rm -r Release.key owncloud-chip-installer.sh local_ip.txt
 
 # Restart Apache
 systemctl restart apache2
