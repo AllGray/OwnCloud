@@ -12,7 +12,7 @@ reset
 # Grab the current hostname
 read -r hostname_old < /etc/hostname
 
-# Start info
+# Start info (banner spacing works assuming hostname: chip)
 echo "+-----------------------------------------------------------+"
 echo "|                   CHOOSE A NEW HOSTNAME                   |"
 echo "|                   Your Hostname is $hostname_old                   |"
@@ -91,7 +91,7 @@ systemctl restart apache2
 # Clear screen
 reset
 
-# Finishing up
+# Finishing up (banner spacing works assuming hostname: owncloud)
 echo "+---------------------------------------------------------------------+"
 echo "|                           Congratulation!                           |"
 echo "|                        Your install is done!                        |"
@@ -105,7 +105,7 @@ echo "|                        To finish your setup!                        |"
 echo "|                                                                     |"
 echo "| Username:       Pick your Poison                                    |"
 echo "| Password:       Something that is not password123                   |"
-echo "| Mount folder:   /media/owncloud/                                    |"
+echo "| Mount folder:   /media/ownclouddrive/                               |"
 echo "|                                                                     |"
 echo "|            This installer was brought to you by AllGray!            |"
 echo "+---------------------------------------------------------------------+"
