@@ -51,6 +51,7 @@ echo "</service-group>" >> /etc/avahi/services/afpd.service
 # Setup host name
 sed -i "s/$hostname_old/$hostname_new/g" /etc/hostname
 sed -i "s/$hostname_old/$hostname_new/g" /etc/hosts
+hostname $hostname_new 
 
 # Restart AVAHI
 sudo /etc/init.d/avahi-daemon restart
